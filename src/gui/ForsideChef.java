@@ -82,7 +82,7 @@ public class ForsideChef extends JFrame {
     public ForsideChef() throws ClassNotFoundException, InstantiationException, IllegalAccessException,
             UnsupportedLookAndFeelException, IOException {
         setUIStyle();
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setBounds(100, 100, 1500, 1100);
         contentPane = new JPanel();
         setContentPane(contentPane);
@@ -190,11 +190,12 @@ public class ForsideChef extends JFrame {
         calendar.addWindowListener(new WindowAdapter() {
             @Override
             public void windowClosed(WindowEvent e) {
-                dispose(); // Dispose the current window (ForsideChef) after the new window is closed
+                //dispose(); // Dispose the current window (ForsideChef) after the new window is closed
             }
         });
-        dispose(); // Dispose the current window (ForsideChef)
+       // dispose(); // Dispose the current window (ForsideChef)
         calendar.setVisible(true);
+        toBack();
     }
 
     private void openRegisterAvailabilityCalendar() throws DataAccessException {
@@ -206,8 +207,10 @@ public class ForsideChef extends JFrame {
                 dispose(); // Dispose the current window (ForsideChef) after the new window is closed
             }
         });
-        dispose(); // Dispose the current window (ForsideChef)
+       // dispose(); // Dispose the current window (ForsideChef)
         availabilityCalendar.setVisible(true);
+        
+        toBack();
     }
 
     
