@@ -204,7 +204,7 @@ public class ForsideChef extends JFrame {
         availabilityCalendar.addWindowListener(new WindowAdapter() {
             @Override
             public void windowClosed(WindowEvent e) {
-                dispose(); // Dispose the current window (ForsideChef) after the new window is closed
+                //dispose(); // Dispose the current window (ForsideChef) after the new window is closed
             }
         });
        // dispose(); // Dispose the current window (ForsideChef)
